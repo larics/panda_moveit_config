@@ -1,0 +1,21 @@
+controller_list:
+  - name: "franka_state_controller"
+    state: "running"
+    type: "franka_control/FrankaStateController"
+    claimed_resources: 
+      - 
+        hardware_interface: "franka_hw::FrankaStateInterface"
+        resources: []
+  - name: "effort_joint_trajectory_controller"
+    state: "running"
+    type: "effort_controllers/JointTrajectoryController"
+    claimed_resources: 
+      - 
+        hardware_interface: "hardware_interface::EffortJointInterface"
+        resources: 
+          - panda_joint1
+          - panda_joint2
+          - panda_joint3
+          - panda_joint4
+          - panda_joint5
+          - panda_joint6
